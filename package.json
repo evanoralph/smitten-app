@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.36",
+    "flexboxgrid": "^6.3.1",
+    "form-serialize": "^0.7.2",
     "meteor-node-stubs": "^0.3.2",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",

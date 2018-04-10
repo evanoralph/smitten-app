@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Main extends React.Component {
   render() {
     return (
-      <div className="landing-page">
+      <div id="landing-page">
         <h2>Landing Page</h2>
 
       </div>
