@@ -5,8 +5,11 @@ class Main extends React.Component {
   render() {
     return (
       <div id="landing-page">
-        <h2>Landing Page</h2>
-
+        <div className="row">
+          <div className="center-xs">
+            <h2>HELLO SMITTEN</h2>
+          </div>
+        </div>
       </div>
     );
   }
