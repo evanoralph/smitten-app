@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="275px" height="198px" viewBox="0 0 275 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="109.380394%" y1="15.1034387%" x2="-21.5399338%" y2="73.2502604%" id="linearGradient-1">
+            <stop stop-color="#E4A8E2" offset="0%"></stop>
+            <stop stop-color="#CC61C8" offset="13.5860127%"></stop>
+            <stop stop-color="#D149CC" offset="36.4130883%"></stop>
+            <stop stop-color="#D94ED4" offset="49.6341333%"></stop>
+            <stop stop-color="#771C73" offset="100%"></stop>
+        </linearGradient>
+        <path d="M182.686794,54.9378932 C163.16667,53.8924926 154.305325,59.0354402 149.638959,61.6232721 C138.631138,67.7278918 131.289133,78.8628177 124.599452,91.4034018 C115.418461,78.2192145 109.917653,67.9844917 97.7663886,60.8922358 C80.8229575,51.002965 62.1407295,55.5722691 62.1407295,55.5722691 C48.6552278,58.0958711 28.7071767,74.8652709 25.6667132,92.5317782 C21.6136208,111.257561 21.9751073,125.13221 31.3933793,140.508867 C34.9693334,146.347116 44.4460079,154.71225 53.1418793,158.62432 C57.7082392,160.678618 65.5038373,166.483011 74.4575492,171.590347 C83.4112611,176.697683 114.906355,196.09361 124.599452,219.493196 C133.31377,184.422589 177.991982,178.008267 204.756605,152.157679 C232.063714,125.789304 229.798896,98.0058079 215.667718,77.0136977 C209.482195,66.2200366 196.31235,55.5722691 182.686794,54.9378932 Z" id="path-2"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.792147871 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="design-language" transform="translate(-2479.000000, -970.000000)">
+            <g id="Group-12" transform="translate(2474.000000, 943.000000)">
+                <polygon id="Rectangle-5" fill="#2F3DF0" transform="translate(123.905582, 134.082896) rotate(358.000000) translate(-123.905582, -134.082896) " points="3.09031769 195.190384 238.401269 61.5555766 244.720847 70.3910769 10.0003904 206.610216"></polygon>
+                <path d="M252.597661,14.0481102 C254.854702,14.2154313 261.155921,65.9109983 287.343742,84.3544403 C285.096323,85.7077501 274.002247,82.5624969 270.149109,80.2258021 C268.347822,79.1334306 260.883932,75.7276134 256.949813,73.1765899 C253.015694,70.6255663 248.115851,71.5139273 244.388359,74.4144916 C240.660867,77.315056 237.289319,79.2330756 235.404803,80.0991923 C227.120873,83.9064562 220.704837,84.8350415 217.501608,83.317569 C250.260328,57.6070159 250.340621,13.880789 252.597661,14.0481102 Z" id="Triangle-3" fill="#2F3DF0" transform="translate(252.422675, 49.364208) rotate(411.000000) translate(-252.422675, -49.364208) "></path>
+                <g id="Fill-1" transform="translate(124.568236, 137.005746) rotate(360.000000) translate(-124.568236, -137.005746) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use stroke="#855883" stroke-width="1" fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <ellipse id="Oval" fill="#000000" transform="translate(98.934995, 118.937331) rotate(361.000000) translate(-98.934995, -118.937331) " cx="98.9349952" cy="118.937331" rx="11.7888603" ry="10.628116"></ellipse>
+                <ellipse id="Oval" fill="#000000" transform="translate(152.815354, 119.008382) rotate(361.000000) translate(-152.815354, -119.008382) " cx="152.815354" cy="119.008382" rx="11.7888603" ry="10.628116"></ellipse>
+                <path d="M130.067318,162.787644 C137.566233,162.787644 144.284835,153.128326 143.645304,152.53987 C143.005773,151.951414 137.566233,153.946221 130.067318,153.946221 C122.568403,153.946221 116.489332,151.582436 116.489332,152.53987 C116.489332,153.497304 122.568403,162.787644 130.067318,162.787644 Z" id="Oval-2" fill="#000000" transform="translate(130.088440, 157.549612) rotate(361.000000) translate(-130.088440, -157.549612) "></path>
+                <polygon id="Rectangle-5" fill="#2F3DF0" transform="translate(214.945486, 78.664664) rotate(-1.000000) translate(-214.945486, -78.664664) " points="192.132971 85.0237058 232.724206 59.3951985 237.758001 68.05951 195.231576 97.9341301"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

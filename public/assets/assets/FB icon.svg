@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="53px" viewBox="0 0 50 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>FB icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="49.046211" height="52.5869565"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="49.046211" height="52.5869565" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="design-language" transform="translate(-3191.000000, -1014.000000)">
+            <g id="FB-icon" transform="translate(3191.000000, 1014.000000)">
+                <path d="M27.218598,41.9362573 L19.9706614,41.9362573 L19.9706614,25.9768799 L16.348737,25.9768799 L16.348737,20.474877 L19.9706614,20.474877 L19.9706614,17.1734874 C19.9706614,12.6877301 22.0156587,10.0165631 27.8246367,10.0165631 L32.6617045,10.0165631 L32.6617045,15.518566 L29.6396869,15.518566 C27.3780281,15.518566 27.2277959,16.2877945 27.2277959,17.721997 L27.21962,20.474877 L32.697474,20.474877 L32.0556658,25.9768799 L27.21962,25.9768799 L27.21962,41.9362573 L27.218598,41.9362573 Z" id="Facebook" fill="#FFFFFF"></path>
+                <use id="Rectangle-3" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

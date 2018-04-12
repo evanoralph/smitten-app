@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="146px" height="149px" viewBox="0 0 146 149" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>take photo button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M72.8058511,0 C113.015959,0 145.611702,33.3123205 145.611702,74.406399 C145.611702,115.500478 113.015959,148.812798 72.8058511,148.812798 C32.5957428,148.812798 0,115.500478 0,74.406399 C0,33.3123205 32.5957428,0 72.8058511,0 L72.8058511,0 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="145.611702" height="148.812798" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="design-language" transform="translate(-4004.000000, -1036.000000)">
+            <g id="take-photo-button" transform="translate(4004.000000, 1036.000000)">
+                <use id="Shape" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                <path d="M72.6845555,17 C103.990997,17 129.369111,42.9360209 129.369111,74.9306964 C129.369111,106.925372 103.990997,132.861393 72.6845555,132.861393 C41.378114,132.861393 16,106.925372 16,74.9306964 C16,42.9360209 41.378114,17 72.6845555,17 L72.6845555,17 Z" id="Shape-2" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

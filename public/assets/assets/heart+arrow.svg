@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="153px" height="513px" viewBox="0 0 153 513" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>heart+arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4A4A4A" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="109.380394%" y1="15.1034387%" x2="-21.5399338%" y2="73.2502604%" id="linearGradient-2">
+            <stop stop-color="#E4A8E2" offset="0%"></stop>
+            <stop stop-color="#CC61C8" offset="13.5860127%"></stop>
+            <stop stop-color="#D94ED4" offset="49.6341333%"></stop>
+            <stop stop-color="#771C73" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="design-language" transform="translate(-1289.000000, -933.000000)">
+            <g id="heart+arrow" transform="translate(1289.000000, 933.000000)">
+                <g id="heart-+-arrow" transform="translate(0.000000, 88.000000)" fill="url(#linearGradient-1)">
+                    <g id="Group-2">
+                        <ellipse id="Oval" fill-rule="nonzero" transform="translate(76.696101, 2.521748) scale(-1, 1) rotate(179.000000) translate(-76.696101, -2.521748) " cx="76.6961015" cy="2.52174767" rx="1.69610146" ry="1.52174767"></ellipse>
+                        <ellipse id="Oval" fill-rule="nonzero" transform="translate(76.482526, 27.124534) scale(-1, 1) rotate(179.000000) translate(-76.482526, -27.124534) " cx="76.4825264" cy="27.1245338" rx="3.48252637" ry="3.12453382"></ellipse>
+                        <ellipse id="Oval-Copy" fill-rule="nonzero" transform="translate(76.237769, 55.699343) scale(-1, 1) rotate(179.000000) translate(-76.237769, -55.699343) " cx="76.2377691" cy="55.6993432" rx="5.23776912" ry="4.69934324"></ellipse>
+                        <ellipse id="Oval-Copy-2" fill-rule="nonzero" transform="translate(76.993012, 87.274153) scale(-1, 1) rotate(179.000000) translate(-76.993012, -87.274153) " cx="76.9930119" cy="87.2741527" rx="6.99301187" ry="6.27415266"></ellipse>
+                        <ellipse id="Oval-Copy-3" fill-rule="nonzero" transform="translate(76.748255, 122.848962) scale(-1, 1) rotate(179.000000) translate(-76.748255, -122.848962) " cx="76.7482546" cy="122.848962" rx="8.74825461" ry="7.84896208"></ellipse>
+                        <ellipse id="Oval-Copy-4" fill-rule="nonzero" transform="translate(76.165194, 161.914651) scale(-1, 1) rotate(179.000000) translate(-76.165194, -161.914651) " cx="76.1651936" cy="161.914651" rx="12.1651936" ry="10.9146507"></ellipse>
+                        <ellipse id="Oval-Copy-5" fill-rule="nonzero" transform="translate(76.250196, 208.579728) scale(-1, 1) rotate(179.000000) translate(-76.250196, -208.579728) " cx="76.2501963" cy="208.579728" rx="16.2501963" ry="14.5797282"></ellipse>
+                        <ellipse id="Oval-Copy-6" fill-rule="nonzero" transform="translate(76.183525, 261.211520) scale(-1, 1) rotate(179.000000) translate(-76.183525, -261.211520) " cx="76.1835253" cy="261.21152" rx="19.1835253" ry="17.2115204"></ellipse>
+                        <ellipse id="Oval-Copy-7" fill-rule="nonzero" transform="translate(76.184056, 320.698013) scale(-1, 1) rotate(179.000000) translate(-76.184056, -320.698013) " cx="76.1840561" cy="320.698013" rx="24.1840561" ry="21.6980126"></ellipse>
+                        <path d="M36,459.970716 C49.7296043,433.915433 73.8608131,389.423627 73.8608131,383.485358 C73.8608131,377.54709 47.6549648,329.129953 36,307 C66.0793801,336.138736 87.1317067,354.346622 117.210997,383.485358 C85.7793631,413.935272 62.8995184,433.915433 36,459.970716 Z" id="Shape" transform="translate(76.605498, 383.485358) rotate(90.000000) translate(-76.605498, -383.485358) "></path>
+                    </g>
+                </g>
+                <path d="M104.347717,1.14823536 C95.1088439,0.653970774 90.9147698,3.08555227 88.706179,4.3090771 C83.496178,7.1953364 80.0212077,12.4599204 76.8549819,18.3890984 C72.5096194,12.1556253 69.9060877,7.3166566 64.1548948,3.96344372 C56.1355699,-0.712195567 47.2932725,1.44816773 47.2932725,1.44816773 C40.9105854,2.64132473 31.469174,10.5698835 30.0301228,18.9225939 C28.1117944,27.776129 28.2828859,34.3360517 32.7405535,41.6061228 C34.4330524,44.3664423 38.9183618,48.3214709 43.0341172,50.1710943 C45.1953751,51.1423651 48.8850312,53.8866771 53.1228225,56.3014215 C57.3606138,58.7161659 72.2672399,67.8865447 76.8549819,78.9498502 C80.9794683,62.3684955 102.125663,59.3358091 114.793358,47.1136716 C127.717811,34.6467254 126.645873,21.5107107 119.957587,11.5856579 C117.029979,6.48242364 110.796692,1.44816773 104.347717,1.14823536 Z" id="Fill-1" stroke="#855883" fill="url(#linearGradient-2)" transform="translate(76.840207, 39.949850) rotate(360.000000) translate(-76.840207, -39.949850) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
