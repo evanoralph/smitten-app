@@ -1,0 +1,41 @@
+#login-form {
+
+  .form-input {
+    font-family: 'Gotham';
+    width:250px;
+    height:40px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid #fff;
+
+    &:focus {
+      outline:none;
+    }
+  }
+
+  .form-input::placeholder {
+    text-align:center;
+    color: white;
+  }
+
+  .form-error {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    font-size: 15px;
+    color: white;
+    border-radius: 40px;
+    background: $sa-pink;
+    height: 50px;
+    width:100%;
+    border: 3px solid #fff;
+    font-family: 'Gotham';
+  }
+
+}

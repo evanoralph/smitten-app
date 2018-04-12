@@ -2,16 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import LogoHeader from '../../components/main/logo_header/LogoHeader';
+import LoginForm from '../../components/main/login/LoginFormContainer';
 
 class Main extends React.Component {
   render() {
     return (
-      <div id="landing-page">
+      <div id="landing-page" className="main-content">
         <div className="row center-xs">
           <LogoHeader/>
         </div>
         <div className="row center-xs">
-
+          <LoginForm/>
         </div>
       </div>
     );

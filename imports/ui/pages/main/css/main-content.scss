@@ -1,3 +1,12 @@
 body {
   font-family: $sa-content;
 }
+
+.main-content {
+  height: 100vh; // Used for all pages
+}
+
+#landing-page {
+  background: url("https://www.stockvault.net/data/2013/06/03/145296/preview16.jpg");
+  background-position-y: -72px;
+}

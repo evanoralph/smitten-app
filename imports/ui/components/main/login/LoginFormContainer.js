@@ -1,5 +1,5 @@
 import { compose, merge } from 'react-komposer';
-import LoginForm from './login-form';
+import LoginForm from './LoginForm';
 import getTrackerLoader from '../../../../lib/getTrackerLoader';
 import { useDeps } from 'react-simple-di-extra';
 
