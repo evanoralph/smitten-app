@@ -15,7 +15,8 @@ class LoginForm extends React.Component {
             value=""
             name="email"
             placeholder="E-Mail"
-            validations={[email]} />
+            validations={[email]}
+          />
         </div>
 
         <div className="mg-top-15">
@@ -25,12 +26,14 @@ class LoginForm extends React.Component {
             name="password"
             type="password"
             placeholder="Password"
-            validations={[required]} />
+            validations={[required]}
+          />
         </div>
 
-        <div className="mg-top-10">
-          <Button className="submit-button">LOG IN</Button>
-        </div>
+        <Button className="btn-pink-rounded">
+          <i className="fa fa-fw fa-2x fa-envelope-o"></i>
+          <span>LOG IN</span>
+        </Button>
       </Form>
     );
   }
