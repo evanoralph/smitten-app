@@ -7,7 +7,6 @@ import { injectDeps } from 'react-simple-di-extra';
 import context from '../../startup/configs/context';
 import actions from '../../startup/configs/actions';
 
-import Login from '../pages/login/login';
 import Main from '../pages/main/main';
 
 import { compose, merge } from 'react-komposer';
@@ -22,8 +21,7 @@ const App = appProps => (
     <Router>
       <div className="App">
         <Switch>
-          <Route exact name="index" path="/" component={Main} />
-          <RoutePublic exact name="login" path="/login" component={Login} {...appProps} />
+          <RoutePublic exact name="login" path="/" component={Main} {...appProps} />
         </Switch>
       </div>
     </Router>
