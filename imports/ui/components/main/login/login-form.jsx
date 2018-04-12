@@ -3,7 +3,7 @@ import Input from 'react-validation/build/input';
 import Button from 'react-validation/build/button';
 import React from 'react';
 import { connect } from 'react-redux';
-import { required, password, email } from '../../../lib/validations';
+import { required, password, email } from '../../../../lib/validations';
 
 class LoginForm extends React.Component {
   render() {

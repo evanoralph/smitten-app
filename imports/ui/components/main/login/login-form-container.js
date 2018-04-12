@@ -1,6 +1,6 @@
 import { compose, merge } from 'react-komposer';
 import LoginForm from './login-form';
-import getTrackerLoader from '../../../lib/getTrackerLoader';
+import getTrackerLoader from '../../../../lib/getTrackerLoader';
 import { useDeps } from 'react-simple-di-extra';
 
 function composer(props, onData) {
