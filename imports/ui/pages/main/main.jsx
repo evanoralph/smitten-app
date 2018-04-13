@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import LogoHeader from '../../components/main/logo_header/LogoHeader';
-import LoginForm from '../../components/main/login/LoginFormContainer';
+import LoginForm from '../../components/main/login_form/LoginFormContainer';
 
 class Main extends React.Component {
   render() {
