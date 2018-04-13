@@ -3,24 +3,37 @@ import Input from 'react-validation/build/input';
 import Button from 'react-validation/build/button';
 import React from 'react';
 import { connect } from 'react-redux';
-import { required, password, email } from '../../../../lib/validations';
+import { required, password, email, notReq } from '../../../../lib/validations';
+import serialize from 'form-serialize';
 
 class LoginForm extends React.Component {
+  loginDefault(e) {
+    e.preventDefault();
+    const form = document.querySelector('#login-form');
+    const loginData = serialize(form, { hash: true });
+
+    this.props.loginDefault(loginData);
+  }
+
   render() {
     return (
-      <Form id="login-form">
+      <Form id="login-form"
+            ref={ c => this.form = c }
+            onSubmit={this.loginDefault.bind(this)}>
         <div>
           <Input
+            autoComplete="off"
             className="form-input text-center"
             value=""
             name="email"
             placeholder="E-Mail"
-            validations={[email]}
+            validations={[email, required]}
           />
         </div>
 
         <div className="mg-top-15">
           <Input
+            autoComplete="off"
             className="form-input text-center"
             value=""
             name="password"

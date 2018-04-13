@@ -35,4 +35,8 @@ const password = (value, props, components) => {
   }
 };
 
-export { required, email, lt, password };
+const notReq = (value) => {
+
+}
+
+export { notReq, required, email, lt, password };

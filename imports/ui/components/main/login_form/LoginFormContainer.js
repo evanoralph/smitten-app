@@ -10,6 +10,8 @@ function composer(props, onData) {
 
 const depsToPropsMapper = (context, actions) => ({
   context: context,
+  loginDefault: actions.login.loginDefault,
+  loginWithFacebook: actions.login.loginWithFacebook
 });
 
 export default merge(compose(getTrackerLoader(composer)), useDeps(depsToPropsMapper))(LoginForm);
