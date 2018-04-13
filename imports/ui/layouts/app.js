@@ -8,6 +8,7 @@ import context from '../../startup/configs/context';
 import actions from '../../startup/configs/actions';
 
 import Main from '../pages/main/main';
+import SignupPage from '../pages/sign-up/signup';
 
 import { compose, merge } from 'react-komposer';
 import getTrackerLoader from '../../lib/getTrackerLoader';
@@ -22,6 +23,7 @@ const App = appProps => (
       <div className="App">
         <Switch>
           <RoutePublic exact name="login" path="/" component={Main} {...appProps} />
+          <RoutePublic exact name="login" path="/sign-up" component={SignupPage} {...appProps} />
         </Switch>
       </div>
     </Router>

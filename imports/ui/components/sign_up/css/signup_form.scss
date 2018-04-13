@@ -1,0 +1,56 @@
+#signup-form {
+  margin-top: 30px;
+  .form-input {
+    font-family: 'Gotham';
+    width:250px;
+    height:40px;
+
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid #fff;
+
+    &:focus {
+      outline:none;
+    }
+  }
+
+  .form-input::placeholder {
+    text-align:center;
+    letter-spacing: 1px;
+    color: white;
+  }
+
+  .form-error {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .btn-pink-rounded {
+    position:relative;
+    margin-top:30px;
+    font-size: 15px;
+    color: white;
+    border-radius: 40px;
+    background: $sa-pink;
+    height: 50px;
+    width:100%;
+    border: 3px solid #fff;
+    font-family: 'Gotham';
+
+    i {
+      float:left;
+      margin-left: 30px;
+    }
+
+    span {
+      position: absolute;
+      top: 15px;
+      right: 80px;
+    }
+
+  }
+
+}
