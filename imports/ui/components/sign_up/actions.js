@@ -1,9 +1,9 @@
 export default {
-  signUpDefault() {
-    console.log('Login with Default Process');
+  signUpDefault({ Meteor }, signupData) {
+    console.log('Sign-up with Default Process', signupData);
   },
 
-  signUpWithFacebook() {
-    console.log('Login with Facebook Process');
+  signUpWithFacebook({ Meteor }) {
+    console.log('Sign-up with Facebook Process');
   }
 }

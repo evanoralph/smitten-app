@@ -3,7 +3,7 @@ export default {
     console.log('Login with Default Process', loginData);
   },
 
-  loginWithFacebook() {
+  loginWithFacebook({ Meteor }) {
     console.log('Login with Facebook Process');
   }
 }

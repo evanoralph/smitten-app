@@ -4,13 +4,12 @@ import getTrackerLoader from '../../../../lib/getTrackerLoader';
 import { useDeps } from 'react-simple-di-extra';
 
 function composer(props, onData) {
-  console.log(props);
   onData(null, {});
 }
 
 const depsToPropsMapper = (context, actions) => ({
   context: context,
-  signupDefault: actions.signup.signUpDefault,
+  signUpDefault: actions.signup.signUpDefault,
   signUpWithFacebook: actions.signup.signUpWithFacebook
 });
 
