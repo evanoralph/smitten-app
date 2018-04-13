@@ -8,7 +8,7 @@ import { required, password, email } from '../../../../lib/validations';
 class LoginForm extends React.Component {
   render() {
     return (
-      <Form id="login-form" className="mg-top-50">
+      <Form id="login-form">
         <div>
           <Input
             className="form-input text-center"

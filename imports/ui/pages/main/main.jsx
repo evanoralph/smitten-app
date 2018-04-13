@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import LogoHeader from '../../components/main/logo_header/LogoHeader';
 import LoginForm from '../../components/main/login/LoginFormContainer';
@@ -14,9 +15,9 @@ class Main extends React.Component {
         <div className="row center-xs">
           <LoginForm />
           <div className="login-controls mg-top-10">
-            <a href="/forgot-password" className="text-purple">
+            <Link to="/forgot-password" className="text-purple">
               <small>Forgot your password?</small>
-            </a>
+            </Link>
             <div className="no-margin">
               <p className="text-white ">Log In With</p>
               <button type="button" className="btn-facebook">
@@ -26,9 +27,9 @@ class Main extends React.Component {
             </div>
             <div className="mg-top-10">
               <small className="text-white">Don't have an account? </small>
-              <a href="/sign-up" className="text-pink text-bold">
+              <Link to="/sign-up" className="text-purple text-bold">
                 <small>SIGN UP</small>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
