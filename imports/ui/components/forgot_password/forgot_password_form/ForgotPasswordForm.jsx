@@ -32,7 +32,7 @@ class ForgotPasswordForm extends React.Component {
           </div>
 
           <Button className="btn-pink-rounded">
-            <span>RESET PASSWORD</span>
+            RESET PASSWORD
           </Button>
         </Form>
       </div>
