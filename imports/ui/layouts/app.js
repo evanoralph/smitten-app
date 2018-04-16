@@ -1,18 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Meteor } from 'meteor/meteor';
-import { Provider } from 'react-redux';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {Meteor} from 'meteor/meteor';
+import {Provider} from 'react-redux';
 import store from '../../startup/configs/store';
-import { injectDeps } from 'react-simple-di-extra';
+import {injectDeps} from 'react-simple-di-extra';
 import context from '../../startup/configs/context';
 import actions from '../../startup/configs/actions';
 
 import Main from '../pages/main/main';
 import SignupPage from '../pages/sign-up/signup';
+import ForgotPasswordPage from '../pages/forgot_password/forgot_password';
 
-import { compose, merge } from 'react-komposer';
+import {compose, merge} from 'react-komposer';
 import getTrackerLoader from '../../lib/getTrackerLoader';
-import { useDeps } from 'react-simple-di-extra';
+import {useDeps} from 'react-simple-di-extra';
 
 import RoutesAuthenticated from './routes/authenticated';
 import RoutePublic from './routes/public';
@@ -23,7 +24,9 @@ const App = appProps => (
       <div className="App">
         <Switch>
           <RoutePublic exact name="login" path="/" component={Main} {...appProps} />
-          <RoutePublic exact name="login" path="/sign-up" component={SignupPage} {...appProps} />
+          <RoutePublic exact name="signup" path="/sign-up" component={SignupPage} {...appProps} />
+          <RoutePublic exact name="forgot_password" path="/forgot-password"
+                       component={ForgotPasswordPage} {...appProps} />
         </Switch>
       </div>
     </Router>

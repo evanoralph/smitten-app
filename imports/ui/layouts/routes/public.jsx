@@ -10,7 +10,7 @@ const RoutePublic = ({ loggingIn, authenticated, component, ...rest }) => (
       return !authenticated ? (
         React.createElement(component, { ...props, loggingIn, authenticated })
       ) : (
-        <Redirect to="/documents" />
+        <Redirect to="/feed" />
       );
     }}
   />
