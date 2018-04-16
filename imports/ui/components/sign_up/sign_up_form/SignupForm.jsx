@@ -35,7 +35,7 @@ class SignupForm extends React.Component {
             />
           </div>
 
-          <div className="mg-top-15">
+          <div className="mg-top-10">
             <Input
               autoComplete="off"
               className="form-input text-center"
@@ -44,6 +44,18 @@ class SignupForm extends React.Component {
               type="password"
               placeholder="Password"
               validations={[required]}
+            />
+          </div>
+
+          <div className="mg-top-10">
+            <Input
+              autoComplete="off"
+              className="form-input text-center"
+              value=""
+              name="confirm"
+              type="password"
+              placeholder="Confirm Password"
+              validations={[required, password]}
             />
           </div>
 

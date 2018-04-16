@@ -1,6 +1,13 @@
 export default {
   loginDefault({ Meteor }, loginData) {
-    console.log('Login with Default Process', loginData);
+    Meteor.loginWithPassword(loginData.email, loginData.password, (err) => {
+      if (!err) {
+        console.log('Login with Default Process', loginData);
+      } else {
+        console.log(err)
+      }
+    })
+
   },
 
   loginWithFacebook({ Meteor }) {

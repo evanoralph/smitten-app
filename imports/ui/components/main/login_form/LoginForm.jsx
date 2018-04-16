@@ -38,7 +38,7 @@ class LoginForm extends React.Component {
             />
           </div>
 
-          <div className="mg-top-15">
+          <div className="mg-top-10">
             <Input
               autoComplete="off"
               className="form-input text-center"
