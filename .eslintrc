@@ -1,0 +1,63 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "meteor": true
+  },
+  "plugins": [
+    "meteor",
+    "react",
+    "prettier"
+  ],
+  "globals": {
+    "cordova": true,
+    "document": true,
+    "device": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:meteor/recommended",
+    "@meteorjs/eslint-config-meteor",
+    "prettier",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "impliedstrict" : true,
+      "experimentalObjectRestSpread" : true
+    }
+  },
+  "rules": {
+    "func-names": ["error", "never"],
+    "import/extensions": ["off", "never"],
+    "no-underscore-dangle": ["error", {"allow": [
+      "_id",
+      "_sleepForMs",
+      "_generateStampedLoginToken",
+      "_insertLoginToken",
+      "_wq",
+      "_localStorage",
+    ] }],
+    "no-console": "off",
+    "indent": 0,
+    "consistent-return": ["error", { "treatUndefinedAsUnspecified": true }],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "react/jsx-uses-vars": [2],
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "es5",
+      "bracketSpacing": true,
+      "jsxBracketSameLine": false,
+      "printWidth": 100
+    }]
+  },
+  "settings": {
+    "import/resolver": { "meteor": {"extensions": [".js", ".jsx"]} }
+  }
+}

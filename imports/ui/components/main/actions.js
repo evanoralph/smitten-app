@@ -11,6 +11,10 @@ export default {
   },
 
   loginWithFacebook({ Meteor }) {
-    console.log('Login with Facebook Process');
+    Meteor.loginWithFacebook({
+      requestPermissions: ['public_profile', 'email']
+    }, function(err, res) {
+      console.log(err, res)
+    })
   }
 }

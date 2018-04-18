@@ -1,11 +1,15 @@
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: $sa-content;
   margin: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 .main-content {
-  height: 100vh; // Used for all pages
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #landing-page {

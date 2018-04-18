@@ -78,7 +78,7 @@ class SignupForm extends React.Component {
               <span>FACEBOOK</span>
             </button>
           </div>
-          <div className="mg-top-10">
+          <div className="mg-top-10 mg-bot-20">
             <small className="text-white">Don't have an account? </small>
             <Link to="/" className="text-purple text-bold">
               <small>LOG IN</small>
