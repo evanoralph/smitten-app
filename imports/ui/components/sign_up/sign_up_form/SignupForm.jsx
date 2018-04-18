@@ -2,7 +2,7 @@ import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import Button from 'react-validation/build/button';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { required, password, email } from '../../../../lib/validations';
@@ -12,7 +12,7 @@ class SignupForm extends React.Component {
   signUpDefault(e) {
     e.preventDefault();
     const signupData = getFormData('#signup-form');
-    this.props.signUpDefault(signupData);
+    this.props.signUpDefault(signupData, this.props.history);
   }
 
   signUpWithFacebook(e) {
@@ -60,7 +60,7 @@ class SignupForm extends React.Component {
           </div>
 
           <Button className="btn-pink-rounded">
-            <i className="fa fa-fw fa-2x fa-envelope-o"></i>
+            <i className="fa fa-fw fa-2x fa-envelope-o" />
             <span>SIGN UP</span>
           </Button>
         </Form>
@@ -73,8 +73,9 @@ class SignupForm extends React.Component {
             <button
               onClick={this.signUpWithFacebook.bind(this)}
               type="button"
-              className="btn-facebook">
-              <i className="fa fa-fw fa-facebook-square fa-2x"></i>
+              className="btn-facebook"
+            >
+              <i className="fa fa-fw fa-facebook-square fa-2x" />
               <span>FACEBOOK</span>
             </button>
           </div>
@@ -90,8 +91,9 @@ class SignupForm extends React.Component {
   }
 }
 
+const SignUpFormWithRouter = withRouter(SignupForm);
 const mapStateToProps = state => {
   return state;
 };
 
-export default connect(mapStateToProps)(SignupForm);
+export default connect(mapStateToProps)(SignUpFormWithRouter);

@@ -1,8 +1,9 @@
 export default {
-  loginDefault({ Meteor }, loginData) {
+  loginDefault({ Meteor }, loginData, history) {
     Meteor.loginWithPassword(loginData.email, loginData.password, err => {
       if (!err) {
         console.log('Login with Default Process', loginData);
+        history.push('/main');
       } else {
         console.log(err);
       }
