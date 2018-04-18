@@ -10,7 +10,7 @@ const RoutesAuthenticated = ({ loggingIn, authenticated, component, ...rest }) =
       return authenticated ? (
         React.createElement(component, { ...props, loggingIn, authenticated })
       ) : (
-        <Redirect to="/login" />
+        <Redirect to="/" />
       );
     }}
   />
