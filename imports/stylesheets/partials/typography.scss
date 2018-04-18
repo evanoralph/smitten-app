@@ -1,0 +1,29 @@
+// Text Alignment / Formatting
+.text-bold {
+  font-weight: bold;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Text Colors
+.text-pink {
+  color: $sa-pink;
+}
+
+.text-purple {
+  color: $sa-purple;
+}
+
+.text-white {
+  color: white;
+}
