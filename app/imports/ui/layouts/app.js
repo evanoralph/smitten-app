@@ -71,16 +71,11 @@ class App extends React.Component {
     var SideMenu = (
       <div id="sideNav">
         <div className="side-header">
-          <span className="sidebar-title">SETTINGS</span>
+          <span className="sidebar-title">
+            <img src="/assets/smitten (logo text).svg" alt=""/>
+          </span>
         </div>
         <div className="side-menu">
-          <Link
-            className="side-menu-item"
-            to={'/contact'}
-            onClick={this.onSetSidebarOpen.bind(this, !this.state.sidebarOpen)}
-          >
-            CONTACT SETTINGS
-          </Link>
           <Link
             className="side-menu-item"
             to="/profile"
@@ -90,10 +85,10 @@ class App extends React.Component {
           </Link>
           <Link
             className="side-menu-item"
-            to={'/contact'}
+            to={'/messages'}
             onClick={this.onSetSidebarOpen.bind(this, !this.state.sidebarOpen)}
           >
-            SUPPORT
+            MESSAGES
           </Link>
           <Link
             className="side-menu-item"
@@ -110,8 +105,10 @@ class App extends React.Component {
             PRIVACY POLICY
           </Link>
         </div>
-        <div className="side-footer">
-          <button onClick={this.logOut.bind(this)}>LOG OUT</button>
+        <div className="side-footer row center-xs">
+          <button
+            className="btn-pink-rounded"
+            onClick={this.logOut.bind(this)}>LOG OUT</button>
         </div>
       </div>
     );
@@ -127,7 +124,7 @@ class App extends React.Component {
         overflow: 'hidden',
         pointerEvents: 'none',
         zIndex: 1001,
-        height: 'calc(100vh - 20px) !important',
+        height: '100vh !important',
       },
       sidebar: {
         zIndex: 2,
@@ -138,7 +135,7 @@ class App extends React.Component {
         WebkitTransition: '-webkit-transform .2s ease-in-out',
         willChange: 'transform',
         overflowY: 'auto',
-        backgroundColor: '#F6F4F0',
+        backgroundColor: '#fff',
         height: '100vh',
         padding: '0px',
         pointerEvents: 'auto',
@@ -156,7 +153,7 @@ class App extends React.Component {
         WebkitOverflowScrolling: 'touch',
         transition: 'left .2s ease-in-out, right .2s ease-in-out',
         pointerEvents: 'none',
-        height: 'calc(100vh - 20px)',
+        height: '100vh',
       },
       overlay: {
         zIndex: 0,
@@ -169,7 +166,7 @@ class App extends React.Component {
         visibility: 'hidden',
         transition: 'opacity .2s ease-in-out, visibility .2s ease-in-out',
         backgroundColor: 'rgba(0,0,0,0)',
-        height: 'calc(100vh - 20px)',
+        height: '100vh',
         pointerEvents: 'none',
         overflow: 'hidden',
       },

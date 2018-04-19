@@ -16,7 +16,7 @@ class Main extends React.Component {
     return (
       <div id="main-page" className="main-content row no-padding no-margin">
         <HeaderSettings onSetOpen={this.props.onSetOpen} open={this.props.open} />
-        asdfsafsa
+
       </div>
     );
   }

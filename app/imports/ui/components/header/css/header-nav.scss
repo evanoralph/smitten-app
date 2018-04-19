@@ -6,7 +6,7 @@
   .header-nav-title {
     text-align: center;
     color: #2a2828;
-    font-family: Europa;
+    font-family: Gotham;
     font-size: 20px;
   }
   .fa-chevron-left {
@@ -16,15 +16,20 @@
   }
   .logo-header {
     img {
-      margin-left: 5px;
-      width: 170px !important;
+      width: 50px;
+      height: 50px;
     }
+  }
+
+  .settings-button {
+    position: absolute;
+    right: 25px;
   }
 
   .menu-header {
     right: 20px;
     position: absolute;
-    background-image: url('/assets/heart+arrow.svg');
+    background-image: url('/assets/ellipse-menu.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -36,14 +41,16 @@
 .side-header {
   width: 100%;
   text-align: center;
-  height: 50px;
-  padding-top: 20px;
 
   .sidebar-title {
-    height: 100%;
-    font-size: 20px;
-    color: #2a2828;
-    letter-spacing: 2px;
+    //height: 100%;
+    //font-size: 20px;
+    //color: #2a2828;
+
+    img {
+      width: 150px;
+      height: 100px;
+    }
   }
 }
 
@@ -58,7 +65,7 @@
     line-height: 56px;
     transition: background-color 0.3s ease-in-out;
     width: 100%;
-
+    font-family: 'Gotham';
     //for Links
     display: block;
     text-decoration: none !important;
@@ -68,33 +75,37 @@
     &.active,
     &:active,
     &:hover {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: $sa-pink;
+      color: #fff;
     }
 
     &:focus {
-      background-color: rgba(0, 0, 0, 0.25);
-      color: #555;
+      background-color: $sa-pink;
+      color: #fff;
     }
   }
 }
 
 .side-footer {
-  button {
-    margin: 0px auto;
-    margin-top: 200px;
-    width: 70%;
-    background: #726D6D;
-    color: #FFF;
-    border: none;
-    display: block;
-    padding: 13px;
-    border-radius: 33px;
-    font-size: 22px;
-    font-family: Europa;
-    letter-spacing: 3px;
-    &:disabled{
-      background: #a7a0a0;
-    }
-  }
+  //button {
+  //  margin: 0px auto;
+  //  margin-top: 200px;
+  //  width: 70%;
+  //  background: #726D6D;
+  //  color: #FFF;
+  //  border: none;
+  //  display: block;
+  //  padding: 13px;
+  //  border-radius: 33px;
+  //  font-size: 22px;
+  //  font-family: Europa;
+  //  letter-spacing: 3px;
+  //  &:disabled{
+  //    background: #a7a0a0;
+  //  }
+  //}
 
+  .btn-pink-rounded {
+    width: 80%;
+  }
 }
