@@ -6,7 +6,7 @@ export default {
     Meteor.call('user.register', signupData, err => {
       if (!err) {
         swal('Success', 'You have successfully registered.', 'success').then(() => {
-          history.push('/');
+          history.push('/main');
         });
       } else {
         swal(
@@ -27,6 +27,9 @@ export default {
       function(err, res) {
         if (!err) {
           console.log('Sign-up with facebook success!', res);
+          swal('Success', 'You have successfully registered.', 'success').then(() => {
+            history.push('/main');
+          });
         } else {
           swal(
             'Oops',
