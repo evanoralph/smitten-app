@@ -1,11 +1,14 @@
+import swal from "sweetalert2";
+
 export default {
   loginDefault({ Meteor }, loginData, history) {
     Meteor.loginWithPassword(loginData.email, loginData.password, err => {
-      if (!err) {
-        console.log('Login with Default Process', loginData);
-        history.push('/main');
-      } else {
-        console.log(err);
+      if (err) {
+        swal(
+          'Oops',
+          `There was an error while trying to register. Please try again. Error: ${err.reason}`,
+          'error'
+        )
       }
     });
   },

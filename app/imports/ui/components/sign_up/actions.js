@@ -1,11 +1,19 @@
+import swal from 'sweetalert2';
+import signup from '../../pages/sign-up/signup';
+
 export default {
   signUpDefault({ Meteor }, signupData, history) {
     Meteor.call('user.register', signupData, err => {
       if (!err) {
-        console.log('Sign-up with Default Process', signupData);
-        history.push('/');
+        swal('Success', 'You have successfully registered.', 'success').then(() => {
+          history.push('/');
+        });
       } else {
-        console.log(err);
+        swal(
+          'Oops',
+          `There was an error while trying to register. Please try again. Error: ${err.reason}`,
+          'error'
+        )
       }
     });
   },

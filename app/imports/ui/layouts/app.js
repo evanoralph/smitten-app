@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { injectDeps, useDeps } from 'react-simple-di-extra';
 import Sidebar from 'react-sidebar';
 import { compose, merge } from 'react-komposer';
-
+import 'sweetalert2/dist/sweetalert2.min.css'
 import store from '../../startup/configs/store';
 import context from '../../startup/configs/context';
 import actions from '../../startup/configs/actions';
