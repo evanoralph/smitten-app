@@ -1,4 +1,4 @@
-import swal from "sweetalert2";
+import swal from 'sweetalert2';
 
 export default {
   loginDefault({ Meteor }, loginData, history) {
@@ -8,7 +8,7 @@ export default {
           'Oops',
           `There was an error while trying to register. Please try again. Error: ${err.reason}`,
           'error'
-        )
+        );
       }
     });
   },
@@ -23,7 +23,11 @@ export default {
         if (!err) {
           console.log('Login with facebook success!', res);
         } else {
-          console.log(err.reason);
+          swal(
+            'Oops',
+            `There was an error while trying to login with Facebook. Please try again. Error: ${err.reason}`,
+            'error'
+          );
         }
       }
     );

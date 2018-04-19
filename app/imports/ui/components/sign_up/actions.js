@@ -19,6 +19,22 @@ export default {
   },
 
   signUpWithFacebook({ Meteor }) {
-    console.log('Sign-up with Facebook Process');
+    Meteor.loginWithFacebook(
+      {
+        loginStyle: 'popup',
+        requestPermissions: ['basic_info', 'email'],
+      },
+      function(err, res) {
+        if (!err) {
+          console.log('Sign-up with facebook success!', res);
+        } else {
+          swal(
+            'Oops',
+            `There was an error while trying to sign up with Facebook. Please try again. Error: ${err.reason}`,
+            'error'
+          );
+        }
+      }
+    );
   },
 };
