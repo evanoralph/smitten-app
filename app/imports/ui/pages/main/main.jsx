@@ -1,19 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-import LogoHeader from '../../components/main/logo_header/LogoHeader';
-import LoginForm from '../../components/main/login_form/LoginFormContainer';
+import HeaderSettings from '../../components/header/header-settings/HeaderSettings';
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log('main', props);
+    this.state = {
+      showHeader: true,
+      currentUser: props.currentUser,
+    };
+  }
+
   render() {
     return (
-      <div id="landing-page" className="main-content">
-        <div className="row center-xs">
-          <LogoHeader />
-        </div>
-        <div className="row center-xs">
-          <LoginForm />
-        </div>
+      <div id="main-page" className="main-content row no-padding no-margin">
+        <HeaderSettings onSetOpen={this.props.onSetOpen} open={this.props.open} />
+        asdfsafsa
       </div>
     );
   }

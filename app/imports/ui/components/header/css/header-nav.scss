@@ -1,0 +1,100 @@
+#header-nav,
+#header-settings {
+  height: 10vh;
+  margin-top: 20px;
+  width: 100%;
+  .header-nav-title {
+    text-align: center;
+    color: #2a2828;
+    font-family: Europa;
+    font-size: 20px;
+  }
+  .fa-chevron-left {
+    color: #726d6d;
+    margin-left: 10px;
+    font-size: 28px !important;
+  }
+  .logo-header {
+    img {
+      margin-left: 5px;
+      width: 170px !important;
+    }
+  }
+
+  .menu-header {
+    right: 20px;
+    position: absolute;
+    background-image: url('/assets/heart+arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10px;
+    height: 40px;
+  }
+}
+
+.side-header {
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  padding-top: 20px;
+
+  .sidebar-title {
+    height: 100%;
+    font-size: 20px;
+    color: #2a2828;
+    letter-spacing: 2px;
+  }
+}
+
+.side-menu {
+  .side-menu-item {
+    padding-left: 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #797575;
+    height: 56px;
+    line-height: 56px;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+
+    //for Links
+    display: block;
+    text-decoration: none !important;
+    outline: 0 !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+
+    &.active,
+    &:active,
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.25);
+      color: #555;
+    }
+  }
+}
+
+.side-footer {
+  button {
+    margin: 0px auto;
+    margin-top: 200px;
+    width: 70%;
+    background: #726D6D;
+    color: #FFF;
+    border: none;
+    display: block;
+    padding: 13px;
+    border-radius: 33px;
+    font-size: 22px;
+    font-family: Europa;
+    letter-spacing: 3px;
+    &:disabled{
+      background: #a7a0a0;
+    }
+  }
+
+}
