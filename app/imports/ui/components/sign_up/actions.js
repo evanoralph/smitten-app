@@ -13,7 +13,7 @@ export default {
           'Oops',
           `There was an error while trying to register. Please try again. Error: ${err.reason}`,
           'error'
-        )
+        );
       }
     });
   },
@@ -33,7 +33,9 @@ export default {
         } else {
           swal(
             'Oops',
-            `There was an error while trying to sign up with Facebook. Please try again. Error: ${err.reason}`,
+            `There was an error while trying to sign up with Facebook. Please try again. Error: ${
+              err.reason
+            }`,
             'error'
           );
         }
