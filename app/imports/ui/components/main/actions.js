@@ -14,13 +14,13 @@ export default {
     Meteor.loginWithFacebook(
       {
         loginStyle: 'popup',
-        requestPermissions: ['public_profile', 'email'],
+        requestPermissions: ['basic_info', 'email'],
       },
       function(err, res) {
         if (!err) {
           console.log('Login with facebook success!', res);
         } else {
-          console.log(err);
+          console.log(err.reason);
         }
       }
     );

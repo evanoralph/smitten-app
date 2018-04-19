@@ -2,4 +2,3 @@
 
 import '/imports/startup/server';
 import '/imports/startup/both';
-import './accounts-config';
