@@ -1,4 +1,5 @@
-node_modules/
+env/
 .idea
-mobile-config.js
-settings/
+start.sh
+android-start.sh
+android-build.sh
