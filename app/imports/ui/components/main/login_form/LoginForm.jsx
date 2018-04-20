@@ -2,7 +2,7 @@ import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import Button from 'react-validation/build/button';
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { required, email } from '../../../../lib/validations';
@@ -13,7 +13,7 @@ class LoginForm extends React.Component {
     e.preventDefault();
     const loginData = getFormData('#login-form');
 
-    this.props.loginDefault(loginData, this.props.history);
+    this.props.loginDefault(loginData);
   }
 
   loginWithFacebook(e) {
@@ -80,9 +80,8 @@ class LoginForm extends React.Component {
   }
 }
 
-const LoginFormWithRouter = withRouter(LoginForm);
 const mapStateToProps = state => {
   return state;
 };
 
-export default connect(mapStateToProps)(LoginFormWithRouter);
+export default connect(mapStateToProps)(LoginForm);
