@@ -16,7 +16,7 @@ export default {
   loginWithFacebook({ Meteor }) {
     Meteor.loginWithFacebook(
       {
-        loginStyle: 'popup',
+        loginStyle: 'redirect',
         requestPermissions: ['basic_info', 'email'],
       },
       function(err, res) {
