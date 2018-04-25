@@ -24,7 +24,6 @@ import PublicRoute from './routes/public';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
       showHeader: true,
       currentUser: props.currentUser,

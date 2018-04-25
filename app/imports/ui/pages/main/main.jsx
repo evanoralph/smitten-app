@@ -5,7 +5,6 @@ import HeaderSettings from '../../components/header/header-settings/HeaderSettin
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    console.log('main', props);
     this.state = {
       showHeader: true,
       currentUser: props.currentUser,
