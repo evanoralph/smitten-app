@@ -2,4 +2,6 @@
 
 import './fixtures.js';
 import './register-api.js';
-import './accounts-config.js';
+import accounts from './accounts-config';
+
+accounts();

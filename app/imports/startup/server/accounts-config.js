@@ -1,8 +1,10 @@
+import { Accounts } from 'meteor/accounts-base';
+
 export default () => {
+  console.log('Started Hooks');
   Accounts.onLogin(data => {
     console.log('Log', data);
   });
-
   Accounts.onCreateUser(function(options, user) {
     const userHandler = user;
     const userId = user._id;
@@ -10,7 +12,7 @@ export default () => {
     console.log('User', user);
 
     if (user.services) {
-      const verificationCode = Meteor.uuid().substring(0, 4);
+      // const verificationCode = Meteor.uuid().substring(0, 4);
       const userData = Meteor.users.findOne({ _id: userId });
       if (!userData && user.services.facebook) {
         if (user.profile && !user.profile.newReg) {
@@ -28,8 +30,8 @@ export default () => {
           };
         }
       }
-      userHandler.credits = 1500;
-      userHandler.verificationCode = verificationCode;
+      // userHandler.credits = 1500;
+      // userHandler.verificationCode = verificationCode;
     }
 
     if (user.services.google || user.services.facebook) {
