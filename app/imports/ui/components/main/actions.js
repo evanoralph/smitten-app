@@ -17,12 +17,13 @@ export default {
     Meteor.loginWithFacebook(
       {
         loginStyle: 'popup',
-        requestPermissions: ['basic_info', 'email'],
+        requestPermissions: ['email'],
       },
       function(err, res) {
         if (!err) {
           console.log('Login with facebook success!', res);
         } else {
+          console.log(err)
           swal(
             'Oops',
             `There was an error while trying to login with Facebook. Please try again. Error: ${err.reason}`,
