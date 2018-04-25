@@ -22,7 +22,7 @@ export default {
     Meteor.loginWithFacebook(
       {
         loginStyle: 'popup',
-        requestPermissions: ['basic_info', 'email'],
+        requestPermissions: ['public_profile', 'email'],
       },
       function(err, res) {
         if (!err) {
