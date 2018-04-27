@@ -1,7 +1,9 @@
 .deploy/
 build/
+mobile_configs/
 env/
 .idea
 start.sh
 android-start.sh
 android-build.sh
+deploy.sh

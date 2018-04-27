@@ -1,8 +1,9 @@
 // Contains all style variables to be used across modules
+@import "normalize";
 
 // Fonts
 $sa-header: ('GothamBold', sans-serif);
-$sa-content: ('Gotham', sans-serif);
+$sa-content: ('GothamOTF', sans-serif);
 
 // App Colors
 $sa-pink: #D463C4;

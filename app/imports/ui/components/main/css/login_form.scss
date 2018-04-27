@@ -1,10 +1,9 @@
 #login-form {
   margin-top: 30px;
-  .form-input {
-    font-family: 'Gotham';
-    width:250px;
-    height:40px;
 
+  .form-input {
+    width:250px;
+    line-height: 2em;
     font-weight: bold;
     font-size: 18px;
     color: white;
@@ -17,7 +16,7 @@
     }
   }
 
-  .form-input::placeholder {
+  .form-input::-webkit-input-placeholder {
     text-align:center;
     letter-spacing: 1px;
     color: white;
