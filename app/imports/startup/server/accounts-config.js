@@ -2,9 +2,6 @@ import { Accounts } from 'meteor/accounts-base';
 
 export default () => {
   console.log('Started Hooks');
-  Accounts.onLogin(data => {
-    console.log('Log', data);
-  });
   Accounts.onCreateUser(function(options, user) {
     const userHandler = user;
     const userId = user._id;
