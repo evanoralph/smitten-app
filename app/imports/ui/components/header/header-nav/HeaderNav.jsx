@@ -8,14 +8,8 @@ class Header extends React.Component {
     const { title, path } = this.props;
 
     return (
-      <div id="header-nav" className="row no-padding no-margin middle-xs">
-        <div className="col-xs-3 header-nav-left-button">
-          <Link to={path}>
-            <span className="fa fa-chevron-left" />
-          </Link>
-        </div>
-        <div className="col-xs-6 header-nav-title">{title}</div>
-        <div className="col-xs-3 header-nav-right-button" />
+      <div id="header-nav" className="row no-padding no-margin center-xs">
+        <div className="col-xs-12 header-nav-title">{title}</div>
       </div>
     );
   }

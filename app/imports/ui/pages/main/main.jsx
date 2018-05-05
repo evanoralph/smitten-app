@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import HeaderSettings from '../../components/header/header-settings/HeaderSettings';
+import HeaderNav from '../../components/header/header-nav/HeaderNav';
 
 class Main extends React.Component {
   constructor(props) {
@@ -14,8 +14,7 @@ class Main extends React.Component {
   render() {
     return (
       <div id="main-page" className="main-content row no-padding no-margin">
-        <HeaderSettings onSetOpen={this.props.onSetOpen} open={this.props.open} />
-
+        <HeaderNav path="/main" title="Meet Cute" />
       </div>
     );
   }

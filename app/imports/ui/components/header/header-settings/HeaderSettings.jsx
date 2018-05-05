@@ -13,17 +13,17 @@ class HeaderSettings extends React.Component {
     return (
       <div id="header-settings" className="row no-padding no-margin center-xs">
         <div className="col-xs-12 header-nav-left-button">
-          <Link to={'/main'}>
-            <span className="logo-header">
-              <img src="/assets/heart+arrow(logo).svg" />
-            </span>
-          </Link>
+          {/*<Link to={'/main'}>*/}
+            {/*<span className="logo-header">*/}
+              {/*<img src="/assets/heart+arrow(logo).svg" />*/}
+            {/*</span>*/}
+          {/*</Link>*/}
           {/*<i*/}
             {/*onClick={this.toggleMenu.bind(this)}*/}
             {/*className="fa fa-fw fa-2x fa-gear fa-pull-right settings-button"*/}
           {/*/>*/}
         </div>
-        <div className="menu-header" onClick={this.toggleMenu.bind(this)} />
+        {/*<div className="menu-header" onClick={this.toggleMenu.bind(this)} />*/}
       </div>
     );
   }

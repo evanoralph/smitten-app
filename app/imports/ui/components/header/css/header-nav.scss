@@ -1,13 +1,15 @@
 #header-nav,
 #header-settings {
-  height: 10vh;
-  margin-top: 20px;
+  background: #eaeaea;
+  height: 9vh;
+  padding-top: 20px;
   width: 100%;
   .header-nav-title {
     text-align: center;
     color: #2a2828;
     font-family: Gotham;
-    font-size: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
   }
   .fa-chevron-left {
     color: #726d6d;

@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { injectDeps, useDeps } from 'react-simple-di-extra';
 import Sidebar from 'react-sidebar';
 import { compose, merge } from 'react-komposer';
-import 'sweetalert2/dist/sweetalert2.min.css'
+import 'sweetalert2/dist/sweetalert2.min.css';
 import store from '../../startup/configs/store';
 import context from '../../startup/configs/context';
 import actions from '../../startup/configs/actions';
@@ -14,7 +14,9 @@ import actions from '../../startup/configs/actions';
 import Main from '../pages/login/login';
 import SignupPage from '../pages/sign-up/signup';
 import ForgotPasswordPage from '../pages/forgot_password/forgot_password';
+
 import UserLandingPage from '../pages/main/main';
+import GenderPairingPage from '../pages/gender_pairing/gender_pairing';
 
 import getTrackerLoader from '../../lib/getTrackerLoader';
 
@@ -71,7 +73,7 @@ class App extends React.Component {
       <div id="sideNav">
         <div className="side-header">
           <span className="sidebar-title">
-            <img src="/assets/smitten (logo text).svg" alt=""/>
+            <img src="/assets/smitten (logo text).svg" alt="" />
           </span>
         </div>
         <div className="side-menu">
@@ -105,9 +107,9 @@ class App extends React.Component {
           </Link>
         </div>
         <div className="side-footer row center-xs">
-          <button
-            className="btn-pink-rounded"
-            onClick={this.logOut.bind(this)}>LOG OUT</button>
+          <button className="btn-pink-rounded" onClick={this.logOut.bind(this)}>
+            LOG OUT
+          </button>
         </div>
       </div>
     );
@@ -195,6 +197,14 @@ class App extends React.Component {
                         component={SignupPage}
                         {...this.props}
                       />
+                      <PublicRoute
+                        exact
+                        name="forgot_password"
+                        path="/forgot-password"
+                        component={ForgotPasswordPage}
+                        {...this.props}
+                      />
+
                       <AuthenticatedRoute
                         exact
                         name="main"
@@ -204,11 +214,13 @@ class App extends React.Component {
                         open={this.state.sidebarOpen}
                         {...this.props}
                       />
-                      <PublicRoute
+                      <AuthenticatedRoute
                         exact
-                        name="forgot_password"
-                        path="/forgot-password"
-                        component={ForgotPasswordPage}
+                        name="gender-pairing"
+                        path="/gender-pairing"
+                        component={GenderPairingPage}
+                        onSetOpen={this.onSetSidebarOpen.bind(this)}
+                        open={this.state.sidebarOpen}
                         {...this.props}
                       />
                     </Switch>
