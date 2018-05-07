@@ -11,6 +11,7 @@
     "form-serialize": "^0.7.2",
     "meteor-node-stubs": "^0.3.2",
     "prop-types": "^15.6.1",
+    "rc-slider": "^8.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-komposer": "^2.0.0",
