@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import LogoHeader from '../../components/main/logo_header/LogoHeader';
+import LogoHeader from '../../components/login/logo_header/LogoHeader';
 import ForgotPasswordForm from '../../components/forgot_password/forgot_password_form/ForgotPasswordFormContainer';
 
 class ForgotPassword extends React.Component {

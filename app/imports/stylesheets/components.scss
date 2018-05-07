@@ -2,11 +2,14 @@
 @import "../ui/components/header/css/header-nav";
 
 // Landing Page
-@import "../ui/components/main/css/login_form";
-@import "../ui/components/main/css/logo_header";
+@import "../ui/components/login/css/login_form";
+@import "../ui/components/login/css/logo_header";
 
 // Signup Page
 @import "../ui/components/sign_up/css/signup_form";
 
 // Forgot Password Page
 @import "../ui/components/forgot_password/css/forgot_password_form";
+
+// Gender Pairing Page
+@import "../ui/components/gender_pairing/css/gender-interest-button";

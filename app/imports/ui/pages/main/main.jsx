@@ -14,7 +14,7 @@ class Main extends React.Component {
   render() {
     return (
       <div id="main-page" className="main-content row no-padding no-margin">
-        <HeaderNav path="/main" title="Meet Cute" />
+        <HeaderNav path="/main" title="meet cute" />
       </div>
     );
   }

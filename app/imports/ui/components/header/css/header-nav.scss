@@ -2,7 +2,6 @@
 #header-settings {
   background: #eaeaea;
   height: 9vh;
-  padding-top: 20px;
   width: 100%;
   .header-nav-title {
     text-align: center;
@@ -10,6 +9,7 @@
     font-family: Gotham;
     font-size: 1.2em;
     font-weight: bold;
+    padding-right: 0;
   }
   .fa-chevron-left {
     color: #726d6d;

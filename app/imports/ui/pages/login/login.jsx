@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import LogoHeader from '../../components/main/logo_header/LogoHeader';
-import LoginForm from '../../components/main/login_form/LoginFormContainer';
+import LogoHeader from '../../components/login/logo_header/LogoHeader';
+import LoginForm from '../../components/login/login_form/LoginFormContainer';
 
 class Main extends React.Component {
   render() {

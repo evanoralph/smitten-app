@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import LogoHeader from '../../components/main/logo_header/LogoHeader';
+import LogoHeader from '../../components/login/logo_header/LogoHeader';
 import SignupForm from '../../components/sign_up/sign_up_form/SignupFormContainer';
 
 class Signup extends React.Component {
