@@ -13,7 +13,7 @@ export default {
         if (Meteor.user() && Meteor.user().profile && Meteor.user().profile.gender_interests) {
           console.log(Meteor.user());
         } else {
-          history.push('/gender-pairing')
+          history.push('/gender-pairing');
         }
       }
     });

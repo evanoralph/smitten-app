@@ -1,4 +1,10 @@
 // Buttons
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
 .btn-rounded {
   position:relative;
   font-size: 15px;

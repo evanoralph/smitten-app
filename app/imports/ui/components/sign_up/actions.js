@@ -1,5 +1,5 @@
 import swal from 'sweetalert2';
-import signup from '../../pages/sign-up/signup';
+import signup from '../../pages/sign_up/signup';
 
 export default {
   signUpDefault({ Meteor }, signupData, history) {

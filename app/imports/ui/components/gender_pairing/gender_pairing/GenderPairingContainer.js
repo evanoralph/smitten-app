@@ -4,15 +4,16 @@ import GenderPairing from './GenderPairing';
 import getTrackerLoader from '../../../../lib/getTrackerLoader';
 
 function composer(props, onData) {
-  onData(null, {});
+  const fromFacebook = Meteor.user() && Meteor.user().profile && Meteor.user().profile.gender;
+
+  onData(null, { fromFacebook });
 }
 
 const depsToPropsMapper = (context, actions) => ({
   context: context,
-  loginDefault: actions.login.loginDefault,
-  loginWithFacebook: actions.login.loginWithFacebook,
+  setGenderPairing: actions.gender_pairing.setGenderPairing,
 });
 
 export default merge(compose(getTrackerLoader(composer)), useDeps(depsToPropsMapper))(
-  GenderPairing
+  GenderPairing,
 );

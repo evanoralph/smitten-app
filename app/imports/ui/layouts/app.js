@@ -12,11 +12,12 @@ import context from '../../startup/configs/context';
 import actions from '../../startup/configs/actions';
 
 import Main from '../pages/login/login';
-import SignupPage from '../pages/sign-up/signup';
+import SignupPage from '../pages/sign_up/signup';
 import ForgotPasswordPage from '../pages/forgot_password/forgot_password';
 
 import UserLandingPage from '../pages/main/main';
 import GenderPairingPage from '../pages/gender_pairing/gender_pairing';
+import PhotoUploadPage from '../pages/photo_upload/photo_upload';
 
 import getTrackerLoader from '../../lib/getTrackerLoader';
 
@@ -223,6 +224,15 @@ class App extends React.Component {
                         open={this.state.sidebarOpen}
                         {...this.props}
                       />
+                        <AuthenticatedRoute
+                            exact
+                            name="photo-upload"
+                            path="/photo-upload"
+                            component={PhotoUploadPage}
+                            onSetOpen={this.onSetSidebarOpen.bind(this)}
+                            open={this.state.sidebarOpen}
+                            {...this.props}
+                        />
                     </Switch>
                   </CSSTransition>
                 </TransitionGroup>
