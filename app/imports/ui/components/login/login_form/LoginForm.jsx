@@ -2,7 +2,7 @@ import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import Button from 'react-validation/build/button';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { required, email } from '../../../../lib/validations';
@@ -13,12 +13,12 @@ class LoginForm extends React.Component {
     e.preventDefault();
     const loginData = getFormData('#login-form');
 
-    this.props.loginDefault(loginData);
+    this.props.loginDefault(loginData, this.props.history);
   }
 
   loginWithFacebook(e) {
     e.preventDefault();
-    this.props.loginWithFacebook();
+    this.props.loginWithFacebook(this.props.history);
   }
 
   render() {
@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
             />
           </div>
 
-          <Button className="btn-pink-rounded">
+          <Button className="btn-rounded bg-pink mg-top-30 btn-login">
             <i className="fa fa-fw fa-2x fa-envelope-o" />
             <span>LOG IN</span>
           </Button>
@@ -62,14 +62,14 @@ class LoginForm extends React.Component {
             <button
               onClick={this.loginWithFacebook.bind(this)}
               type="button"
-              className="btn-facebook"
+              className="btn-rounded bg-pink btn-facebook"
             >
               <i className="fa fa-fw fa-facebook-square fa-2x" />
               <span>FACEBOOK</span>
             </button>
           </div>
           <div className="mg-top-10">
-            <small className="text-white">Don't have an account? </small>
+            <small className="text-white">Don&#39;t have an account? </small>
             <Link to="/sign-up" className="text-purple text-bold">
               <small>SIGN UP</small>
             </Link>
@@ -80,8 +80,9 @@ class LoginForm extends React.Component {
   }
 }
 
+const LoginFormWithRouter = withRouter(LoginForm);
 const mapStateToProps = state => {
   return state;
 };
 
-export default connect(mapStateToProps)(LoginForm);
+export default connect(mapStateToProps)(LoginFormWithRouter);

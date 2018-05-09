@@ -1,4 +1,6 @@
 import React from 'react';
+import Range from 'rc-slider/lib/Range';
+import 'rc-slider/assets/index.css';
 import GenderInterest from '../gender_interests/GenderInterestButton';
 
 class GenderPairingContent extends React.Component {
@@ -6,17 +8,20 @@ class GenderPairingContent extends React.Component {
     super(props);
     this.state = {
       interests: '',
-      ageMin: 18,
-      ageMax: 25,
+      ageRange: [20, 25],
     };
+  }
+
+  setAgeRange(ageRange) {
+    this.setState({ ageRange });
   }
 
   changeGenderInterest(type) {
     this.setState({ interests: type });
-  };
+  }
 
   render() {
-    const { interests } = this.state;
+    const { interests, ageRange } = this.state;
     return (
       <div id="gender-pairing-page" className="row start-xs content-page">
         <div className="col-xs-12">
@@ -53,6 +58,21 @@ class GenderPairingContent extends React.Component {
               <p>AGE RANGE</p>
             </div>
             {/* React Slider */}
+            <div className="col-xs-8 rc-range-cont">
+              <div className="col-xs-8">
+                <Range
+                  min={18}
+                  max={50}
+                  step={1}
+                  defaultValue={ageRange}
+                  onChange={this.setAgeRange.bind(this)}
+                />
+              </div>
+              <div className="col-xs-4">{ageRange.join('-')}</div>
+            </div>
+            <div className="col-xs-10 upload-button">
+              <button className="btn-pink-rounded">Done, let&#39;s take a photo!</button>
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderNav from '../../components/header/header-nav/HeaderNav';
-import GenderPairingContent from '../../components/gender_pairing/gender_pairing/GenderPairing';
+import GenderPairingContent from '../../components/gender_pairing/gender_pairing/GenderPairingContainer';
 
 const GenderPairing = props => (
   <div id="main-page" className="main-content row no-padding no-margin">

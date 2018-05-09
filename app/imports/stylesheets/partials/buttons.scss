@@ -1,4 +1,27 @@
 // Buttons
+.btn-rounded {
+  position:relative;
+  font-size: 15px;
+  height: 50px;
+  width:100%;
+  border-radius: 40px;
+  font-family: 'Gotham';
+
+  &.bg-pink {
+    border: 3px solid #fff;
+  }
+}
+
+.bg-pink {
+  background: $sa-pink;
+  color: #fff;
+}
+
+.bg-gray {
+  background: $sa-gray;
+  color: #000;
+}
+
 .btn-pink-rounded {
   position:relative;
   margin-top:30px;
@@ -11,3 +34,4 @@
   border: 3px solid #fff;
   font-family: 'Gotham';
 }
+

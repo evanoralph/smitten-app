@@ -59,7 +59,7 @@ class SignupForm extends React.Component {
             />
           </div>
 
-          <Button className="btn-pink-rounded">
+          <Button className="btn-rounded bg-pink mg-top-30 btn-signup">
             <i className="fa fa-fw fa-2x fa-envelope-o" />
             <span>SIGN UP</span>
           </Button>
@@ -80,7 +80,7 @@ class SignupForm extends React.Component {
             </button>
           </div>
           <div className="mg-top-10 mg-bot-20">
-            <small className="text-white">Don't have an account? </small>
+            <small className="text-white">Don&#39;t have an account? </small>
             <Link to="/" className="text-purple text-bold">
               <small>LOG IN</small>
             </Link>
