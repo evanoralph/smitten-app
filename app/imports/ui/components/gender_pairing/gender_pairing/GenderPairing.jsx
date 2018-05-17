@@ -55,17 +55,17 @@ class GenderPairingContent extends React.Component {
                     name="male"
                     label="Man"
                   />
+                  <div className="col-xs-12 mg-top-10">
+                    <GenderInterest
+                      handleClick={this.changeGender.bind(this, 'female')}
+                      activeBtn={gender}
+                      name="female"
+                      label="Woman"
+                    />
+                  </div>
                 </div>
               </div>
             )}
-            <div className="col-xs-12 mg-top-10">
-              <GenderInterest
-                handleClick={this.changeGender.bind(this, 'female')}
-                activeBtn={gender}
-                name="female"
-                label="Woman"
-              />
-            </div>
             <div className="col-xs-12 mg-top-10">
               <p>I&#39;M INTERESTED IN</p>
             </div>
