@@ -29,7 +29,19 @@ Meteor.methods({
             },
           },
         },
-      },
+      }
+    );
+  },
+
+  'user.updateImage'(imgUrl) {
+    const userId = this.userId;
+    Meteor.users.update(
+      { _id: userId },
+      {
+        $set: {
+          avatar: imgUrl,
+        },
+      }
     );
   },
 });

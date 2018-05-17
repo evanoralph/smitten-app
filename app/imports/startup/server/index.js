@@ -3,5 +3,7 @@
 import './fixtures.js';
 import './register-api.js';
 import accounts from './accounts-config';
+import slingshot from './slingshot-config';
 
 accounts();
+slingshot();

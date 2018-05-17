@@ -1,9 +1,11 @@
-import React from "react";
-import HeaderNav from "../../components/header/header-nav/HeaderNav";
+import React from 'react';
+import HeaderNav from '../../components/header/header-nav/HeaderNav';
+import PhotoUploadContent from '../../components/photo_upload/photo_upload/PhotoUploadContainer';
 
 const PhotoUpload = props => (
   <div id="photo-upload-page" className="main-content row no-padding no-margin">
     <HeaderNav path="/main" title="photo" />
+    <PhotoUploadContent />
   </div>
 );
 

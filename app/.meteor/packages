@@ -15,6 +15,7 @@ standard-minifier-js@2.3.1    # JS minifier run for production mode
 es5-shim@4.7.0                # ECMAScript 5 compatibility for older browsers
 ecmascript@0.10.6              # Enable ECMAScript2015+ syntax in app code
 shell-server@0.3.1            # Server-side component of the `meteor shell` command
+jquery
 
 meteortesting:mocha               # A package for writing and running your meteor app and package tests with mocha
 fourseven:scss
@@ -24,3 +25,4 @@ mdg:validated-method
 fortawesome:fontawesome
 alanning:roles
 btafel:accounts-facebook-cordova
+edgee:slingshot
