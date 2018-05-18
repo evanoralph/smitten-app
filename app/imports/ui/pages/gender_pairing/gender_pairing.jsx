@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderNav from '../../components/header/header-nav/HeaderNav';
+import HeaderNav from '../../components/header/header-nav/HeaderNavContainer';
 import GenderPairingContent from '../../components/gender_pairing/gender_pairing/GenderPairingContainer';
 
 const GenderPairing = props => (

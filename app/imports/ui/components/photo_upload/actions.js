@@ -15,7 +15,7 @@ export default {
       } else {
         Meteor.call('user.updateImage', downloadUrl, id, function(err) {
           if (!err) {
-            history.push('/profile')
+            history.push('/profile');
           }
         });
         console.log(downloadUrl);

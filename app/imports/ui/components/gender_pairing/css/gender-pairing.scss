@@ -3,21 +3,6 @@
     font-size: 1.15rem;
   }
 
-  .gender-interest-button {
-    background: white;
-    outline: none;
-    border: 1px solid black;
-    padding: 9px 15px 7px 15px;
-    width: 150px;
-
-    transition: ease-in 0.2s;
-
-    &.active {
-      background: black;
-      color: white;
-    }
-  }
-
   .rc-range-cont {
     display: inline-flex;
   }

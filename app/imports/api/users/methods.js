@@ -29,7 +29,7 @@ Meteor.methods({
             },
           },
         },
-      }
+      },
     );
   },
 
@@ -39,9 +39,9 @@ Meteor.methods({
       { _id: userId },
       {
         $set: {
-          avatar: imgUrl,
+          'profile.avatar': imgUrl,
         },
-      }
+      },
     );
   },
 });

@@ -1,5 +1,5 @@
 import { compose, merge } from 'react-komposer';
-import HeaderNav from './header-nav';
+import HeaderNav from './HeaderNav';
 import getTrackerLoader from '../../../../lib/getTrackerLoader';
 import { useDeps } from 'react-simple-di-extra';
 

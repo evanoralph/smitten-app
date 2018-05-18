@@ -18,6 +18,7 @@ import ForgotPasswordPage from '../pages/forgot_password/forgot_password';
 import UserLandingPage from '../pages/main/main';
 import GenderPairingPage from '../pages/gender_pairing/gender_pairing';
 import PhotoUploadPage from '../pages/photo_upload/photo_upload';
+import ProfilePage from '../pages/profile/profile';
 
 import getTrackerLoader from '../../lib/getTrackerLoader';
 
@@ -224,15 +225,24 @@ class App extends React.Component {
                         open={this.state.sidebarOpen}
                         {...this.props}
                       />
-                        <AuthenticatedRoute
-                            exact
-                            name="photo-upload"
-                            path="/photo-upload"
-                            component={PhotoUploadPage}
-                            onSetOpen={this.onSetSidebarOpen.bind(this)}
-                            open={this.state.sidebarOpen}
-                            {...this.props}
-                        />
+                      <AuthenticatedRoute
+                        exact
+                        name="photo-upload"
+                        path="/photo-upload"
+                        component={PhotoUploadPage}
+                        onSetOpen={this.onSetSidebarOpen.bind(this)}
+                        open={this.state.sidebarOpen}
+                        {...this.props}
+                      />
+                      <AuthenticatedRoute
+                        exact
+                        name="user-profile"
+                        path="/profile"
+                        component={ProfilePage}
+                        onSetOpen={this.onSetSidebarOpen.bind(this)}
+                        open={this.state.sidebarOpen}
+                        {...this.props}
+                      />
                     </Switch>
                   </CSSTransition>
                 </TransitionGroup>

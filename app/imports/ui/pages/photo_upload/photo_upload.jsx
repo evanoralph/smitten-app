@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderNav from '../../components/header/header-nav/HeaderNav';
+import HeaderNav from '../../components/header/header-nav/HeaderNavContainer';
 import PhotoUploadContent from '../../components/photo_upload/photo_upload/PhotoUploadContainer';
 
 const PhotoUpload = props => (

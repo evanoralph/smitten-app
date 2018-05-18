@@ -10,8 +10,8 @@ export default {
           'error'
         );
       } else {
-        if (Meteor.user() && Meteor.user().profile && Meteor.user().profile.gender_interests) {
-          console.log(Meteor.user());
+        if (Meteor.user() && Meteor.user().profile && Meteor.user().profile.interest) {
+          history.push('/gender-pairing');
         } else {
           history.push('/gender-pairing');
         }
@@ -28,7 +28,7 @@ export default {
       function(err, res) {
         if (!err) {
           console.log('Login with facebook success!', res);
-          if (Meteor.user() && Meteor.user().profile && Meteor.user().profile.gender_interests) {
+          if (Meteor.user() && Meteor.user().profile && Meteor.user().profile.interest) {
             console.log(Meteor.user());
           } else {
             history.push('/gender-pairing')
