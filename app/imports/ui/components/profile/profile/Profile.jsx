@@ -65,14 +65,14 @@ class Profile extends React.Component {
                 activeBtn={interests}
                 name="women"
                 label="Women"
-                extraClass="mg-top-5"
+                extraClass="mg-top-10"
               />
               <GenderInterestButton
                 handleClick={this.changeGenderInterest.bind(this, 'men-and-women')}
                 activeBtn={interests}
                 name="men-and-women"
                 label="Men and Women"
-                extraClass="mg-top-5"
+                extraClass="mg-top-10"
               />
             </div>
             <div className="col-xs-12">
