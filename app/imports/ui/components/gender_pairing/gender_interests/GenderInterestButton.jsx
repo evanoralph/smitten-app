@@ -1,9 +1,9 @@
 import React from 'react';
 
-const GenderInterestButton = ({ handleClick, label, name, activeBtn }) => (
+const GenderInterestButton = ({ handleClick, label, name, activeBtn, extraClass }) => (
   <button
     onClick={handleClick}
-    className={`gender-interest-button ${activeBtn === name && 'active'}`}
+    className={`gender-interest-button ${activeBtn === name && 'active'} ${extraClass}`}
   >
     {label}
   </button>

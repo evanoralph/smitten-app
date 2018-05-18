@@ -11,4 +11,17 @@
     width: 75px;
   }
 
+  .profile-content {
+    h4 {
+      font-weight: normal;
+    }
+
+    .gender-interest-button {
+      font-size: 0.8em;
+    }
+  }
+
+  .rc-range-cont {
+    display: inline-flex;
+  }
 }
