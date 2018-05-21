@@ -1,5 +1,5 @@
 import { compose, merge } from 'react-komposer';
-import ForgotPasswordForm from './ForgotPasswordForm';
+import ResetPasswordForm from './ResetPasswordForm';
 import getTrackerLoader from '../../../../lib/getTrackerLoader';
 import { useDeps } from 'react-simple-di-extra';
 
@@ -13,4 +13,4 @@ const depsToPropsMapper = (context, actions) => ({
 });
 
 export default merge(compose(getTrackerLoader(composer)),
-  useDeps(depsToPropsMapper))(ForgotPasswordForm);
+  useDeps(depsToPropsMapper))(ResetPasswordForm);

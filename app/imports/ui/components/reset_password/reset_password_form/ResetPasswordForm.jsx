@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { required, email } from '../../../../lib/validations';
 import { getFormData } from '../../../../lib/helpers';
 
-class ForgotPasswordForm extends React.Component {
+class ResetPasswordForm extends React.Component {
   forgotPassword(e) {
     e.preventDefault();
     const email = getFormData('#forgot-password-form');
@@ -38,6 +38,6 @@ class ForgotPasswordForm extends React.Component {
   }
 }
 
-const ForgotPassWithRouter = withRouter(ForgotPasswordForm);
+const ResetPassWithRouter = withRouter(ResetPasswordForm);
 const mapStateToProps = state => state;
-export default connect(mapStateToProps)(ForgotPassWithRouter);
+export default connect(mapStateToProps)(ResetPassWithRouter);

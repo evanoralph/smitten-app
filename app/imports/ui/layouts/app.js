@@ -14,6 +14,7 @@ import actions from '../../startup/configs/actions';
 import Main from '../pages/login/login';
 import SignupPage from '../pages/sign_up/signup';
 import ForgotPasswordPage from '../pages/forgot_password/forgot_password';
+import ResetPasswordPage from '../pages/reset_password/reset_password';
 
 import UserLandingPage from '../pages/main/main';
 import GenderPairingPage from '../pages/gender_pairing/gender_pairing';
@@ -206,7 +207,13 @@ class App extends React.Component {
                         component={ForgotPasswordPage}
                         {...this.props}
                       />
-
+                      <PublicRoute
+                        exact
+                        name="reset_password"
+                        path="/reset-password/:token"
+                        component={ResetPasswordPage}
+                        {...this.props}
+                      />
                       <AuthenticatedRoute
                         exact
                         name="main"

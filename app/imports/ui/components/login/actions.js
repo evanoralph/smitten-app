@@ -11,7 +11,7 @@ export default {
         );
       } else {
         if (Meteor.user() && Meteor.user().profile && Meteor.user().profile.interest) {
-          history.push('/gender-pairing');
+          history.push('/profile');
         } else {
           history.push('/gender-pairing');
         }
