@@ -1,30 +1,30 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Meteor } from 'meteor/meteor';
-import { Provider } from 'react-redux';
-import { injectDeps, useDeps } from 'react-simple-di-extra';
-import Sidebar from 'react-sidebar';
-import { compose, merge } from 'react-komposer';
-import 'sweetalert2/dist/sweetalert2.min.css';
-import store from '../../startup/configs/store';
-import context from '../../startup/configs/context';
-import actions from '../../startup/configs/actions';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { Meteor } from "meteor/meteor";
+import { Provider } from "react-redux";
+import { injectDeps, useDeps } from "react-simple-di-extra";
+import Sidebar from "react-sidebar";
+import { compose, merge } from "react-komposer";
+import "sweetalert2/dist/sweetalert2.min.css";
+import store from "../../startup/configs/store";
+import context from "../../startup/configs/context";
+import actions from "../../startup/configs/actions";
 
-import Main from '../pages/login/login';
-import SignupPage from '../pages/sign_up/signup';
-import ForgotPasswordPage from '../pages/forgot_password/forgot_password';
-import ResetPasswordPage from '../pages/reset_password/reset_password';
+import Main from "../pages/login/login";
+import SignupPage from "../pages/sign_up/signup";
+import ForgotPasswordPage from "../pages/forgot_password/forgot_password";
+import ResetPasswordPage from "../pages/reset_password/reset_password";
 
-import UserLandingPage from '../pages/main/main';
-import GenderPairingPage from '../pages/gender_pairing/gender_pairing';
-import PhotoUploadPage from '../pages/photo_upload/photo_upload';
-import ProfilePage from '../pages/profile/profile';
+import UserLandingPage from "../pages/main/main";
+import GenderPairingPage from "../pages/gender_pairing/gender_pairing";
+import PhotoUploadPage from "../pages/photo_upload/photo_upload";
+import ProfilePage from "../pages/profile/profile";
 
-import getTrackerLoader from '../../lib/getTrackerLoader';
+import getTrackerLoader from "../../lib/getTrackerLoader";
 
-import AuthenticatedRoute from './routes/authenticated';
-import PublicRoute from './routes/public';
+import AuthenticatedRoute from "./routes/authenticated";
+import PublicRoute from "./routes/public";
 
 class App extends React.Component {
   constructor(props) {
@@ -32,10 +32,44 @@ class App extends React.Component {
     this.state = {
       showHeader: true,
       currentUser: props.currentUser,
-      sidebarOpen: false,
+      sidebarOpen: false
     };
 
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+  }
+
+  componentDidMount() {
+    const self = this;
+
+    if (Meteor.isCordova) {
+      document.addEventListener(
+        "deviceready",
+        () => {
+          if (device.platform === "Android") {
+            document.addEventListener("resume", branchInit, false);
+          } else {
+            document.addEventListener("deviceready", branchInit, false);
+          }
+        },
+        false
+      );
+
+      function branchInit() {
+        Branch.initSession(data => {
+          // read deep link data on click
+          let code = "";
+          if (device.platform === "Android") {
+            code = data.code;
+          } else {
+            code =
+              getParameterByName("code", data["+non_branch_link"]) || data.code;
+          }
+          if (code) {
+            self.props.getToken(code, "isMobile");
+          }
+        });
+      }
+    }
   }
 
   onSetSidebarOpen = function(open, url) {
@@ -83,27 +117,31 @@ class App extends React.Component {
           <Link
             className="side-menu-item"
             to="/profile"
-            onClick={this.onSetSidebarOpen.bind(this, !this.state.sidebarOpen, '/profile')}
+            onClick={this.onSetSidebarOpen.bind(
+              this,
+              !this.state.sidebarOpen,
+              "/profile"
+            )}
           >
             MY PROFILE
           </Link>
           <Link
             className="side-menu-item"
-            to={'/messages'}
+            to={"/messages"}
             onClick={this.onSetSidebarOpen.bind(this, !this.state.sidebarOpen)}
           >
             MESSAGES
           </Link>
           <Link
             className="side-menu-item"
-            to={'/contact'}
+            to={"/contact"}
             onClick={this.onSetSidebarOpen.bind(this, !this.state.sidebarOpen)}
           >
             TERMS OF SERVICE
           </Link>
           <Link
             className="side-menu-item"
-            to={'/contact'}
+            to={"/contact"}
             onClick={this.onSetSidebarOpen.bind(this, !this.state.sidebarOpen)}
           >
             PRIVACY POLICY
@@ -120,67 +158,67 @@ class App extends React.Component {
     let SideMenuStyles = {
       root: {
         //display: classNames({"none": !this.state.showHeader}),
-        position: 'absolute',
+        position: "absolute",
         top: 0,
         left: 0,
         right: 0,
         bottom: 0,
-        overflow: 'hidden',
-        pointerEvents: 'none',
+        overflow: "hidden",
+        pointerEvents: "none",
         zIndex: 1001,
-        height: '100vh !important',
+        height: "100vh !important"
       },
       sidebar: {
         zIndex: 2,
-        position: 'absolute',
+        position: "absolute",
         top: 0,
         bottom: 0,
-        transition: 'transform .2s ease-in-out',
-        WebkitTransition: '-webkit-transform .2s ease-in-out',
-        willChange: 'transform',
-        overflowY: 'auto',
-        backgroundColor: '#fff',
-        height: '100vh',
-        padding: '0px',
-        pointerEvents: 'auto',
-        overflow: 'hidden',
-        width: '90vw',
-        boxShadow: 'rgba(0, 0, 0, 0.25) 10px 0px 20px !important',
+        transition: "transform .2s ease-in-out",
+        WebkitTransition: "-webkit-transform .2s ease-in-out",
+        willChange: "transform",
+        overflowY: "auto",
+        backgroundColor: "#fff",
+        height: "100vh",
+        padding: "0px",
+        pointerEvents: "auto",
+        overflow: "hidden",
+        width: "90vw",
+        boxShadow: "rgba(0, 0, 0, 0.25) 10px 0px 20px !important"
       },
       content: {
-        position: 'absolute',
+        position: "absolute",
         top: 20,
         left: 0,
         right: 0,
         bottom: 0,
-        overflowY: 'hidden',
-        WebkitOverflowScrolling: 'touch',
-        transition: 'left .2s ease-in-out, right .2s ease-in-out',
-        pointerEvents: 'none',
-        height: '100vh',
+        overflowY: "hidden",
+        WebkitOverflowScrolling: "touch",
+        transition: "left .2s ease-in-out, right .2s ease-in-out",
+        pointerEvents: "none",
+        height: "100vh"
       },
       overlay: {
         zIndex: 0,
-        position: 'fixed',
+        position: "fixed",
         top: 20,
         left: 0,
         right: 0,
         bottom: 0,
         opacity: 0,
-        visibility: 'hidden',
-        transition: 'opacity .2s ease-in-out, visibility .2s ease-in-out',
-        backgroundColor: 'rgba(0,0,0,0)',
-        height: '100vh',
-        pointerEvents: 'none',
-        overflow: 'hidden',
+        visibility: "hidden",
+        transition: "opacity .2s ease-in-out, visibility .2s ease-in-out",
+        backgroundColor: "rgba(0,0,0,0)",
+        height: "100vh",
+        pointerEvents: "none",
+        overflow: "hidden"
       },
       dragHandle: {
         zIndex: 1,
-        position: 'fixed',
+        position: "fixed",
         top: 0,
         bottom: 0,
-        pointerEvents: 'auto',
-      },
+        pointerEvents: "auto"
+      }
     };
 
     return (
@@ -190,9 +228,19 @@ class App extends React.Component {
             render={({ location }) => (
               <div id="app-container">
                 <TransitionGroup>
-                  <CSSTransition key={location.key} classNames="fade" timeout={300}>
+                  <CSSTransition
+                    key={location.key}
+                    classNames="fade"
+                    timeout={300}
+                  >
                     <Switch location={location}>
-                      <PublicRoute exact name="login" path="/" component={Main} {...this.props} />
+                      <PublicRoute
+                        exact
+                        name="login"
+                        path="/"
+                        component={Main}
+                        {...this.props}
+                      />
                       <PublicRoute
                         exact
                         name="sign up"
@@ -268,8 +316,10 @@ function composer(props, onData) {
   console.log(props);
   onData(null, {
     loggingIn,
-    authenticated: !loggingIn && !!Meteor.userId(),
+    authenticated: !loggingIn && !!Meteor.userId()
   });
 }
 
-export default merge(compose(getTrackerLoader(composer)))(injectDeps(context, actions)(App));
+export default merge(compose(getTrackerLoader(composer)))(
+  injectDeps(context, actions)(App)
+);
