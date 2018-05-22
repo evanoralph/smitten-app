@@ -46,8 +46,16 @@ class PhotoUpload extends React.Component {
               <p>PLEASE UPLOAD A CURRENT PHOTO!</p>
             </div>
             <div className="col-xs-12 mg-top-30 file-upload-control">
-              {/*<img src="/assets/upload icon.svg" alt=""/>*/}
-              <input type="file" onChange={this.preview.bind(this)} ref={i => (this.image = i)} />
+              <label htmlFor="img-upload">
+                <img src="/assets/upload icon.svg" alt="" />
+                <input
+                  type="file"
+                  id="img-upload"
+                  style={{ display: 'none' }}
+                  onChange={this.preview.bind(this)}
+                  ref={i => (this.image = i)}
+                />
+              </label>
             </div>
           </div>
         </div>

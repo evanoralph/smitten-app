@@ -22,11 +22,19 @@ class Profile extends React.Component {
   }
 
   showProfileImages() {
-
+    const images = [];
+    for (let x = 0; x < 4; x++) {
+      images.push(
+        <div className="col-xs" key={x}>
+          <img src="/assets/placeholder.png" alt="" />
+        </div>
+      );
+    }
+    return images;
   }
 
   render() {
-    const { ageRange, interests, gender } = this.state;
+    const { ageRange, interests } = this.state;
     return (
       <div id="profile-page" className="row start-xs content-page">
         <div className="col-xs-12">
@@ -35,18 +43,7 @@ class Profile extends React.Component {
               <img src={this.props.user.avatar} alt="" />
             </div>
             <div className="row between-xs profile-images mg-top-10">
-              <div className="col-xs">
-                <img src={this.props.user.avatar} alt="" />
-              </div>
-              <div className="col-xs">
-                <img src={this.props.user.avatar} alt="" />
-              </div>
-              <div className="col-xs">
-                <img src={this.props.user.avatar} alt="" />
-              </div>
-              <div className="col-xs">
-                <img src={this.props.user.avatar} alt="" />
-              </div>
+              {this.showProfileImages()}
             </div>
           </div>
           <div className="row start-xs profile-content">
