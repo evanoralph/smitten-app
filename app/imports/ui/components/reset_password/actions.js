@@ -1,22 +1,15 @@
 import swal from 'sweetalert2';
 
 export default {
-  forgotPassword({ Meteor }, data, history) {
-
-    Accounts.forgotPassword({ email: data.email }, function(err) {
-      if (err) {
-        if (err.message === 'User not found [403]') {
-          swal('Error', 'This email does not exist.', 'error');
-        } else {
-          swal('Error', 'Something went wrong while requesting a forgot password email.', 'error');
-        }
+  resetPassword({ Meteor }, data, history) {
+    Accounts.resetPassword(data.token, data.password, err => {
+      if (!err) {
+        swal('Success', 'You have successfully changed your password', 'success').then(() => {
+          history.push('/profile');
+        });
       } else {
-        swal('Email Sent', 'Check your e-mail for the reset password link', 'success')
-          .then(() => {
-            history.push('/');
-          });
+        swal('Error', 'Something went wrong. Please try again', 'error');
       }
     });
-    // Generate token in email
-  }
-}
+  },
+};

@@ -5,29 +5,43 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { required, email } from '../../../../lib/validations';
+import { required, password } from '../../../../lib/validations';
 import { getFormData } from '../../../../lib/helpers';
 
 class ResetPasswordForm extends React.Component {
-  forgotPassword(e) {
+  resetPassword(e) {
     e.preventDefault();
-    const email = getFormData('#forgot-password-form');
+    const password = getFormData('#reset-password-form');
+    password.token = this.props.token;
 
-    this.props.forgotPassword(email, this.props.history);
+    this.props.resetPassword(password, this.props.history);
   }
 
   render() {
     return (
       <div className="row center-xs">
-        <Form id="forgot-password-form" onSubmit={this.forgotPassword.bind(this)}>
+        <Form id="reset-password-form" onSubmit={this.resetPassword.bind(this)}>
           <div>
             <Input
               autoComplete="off"
+              type="password"
               className="form-input text-center"
               value=""
-              name="email"
-              placeholder="Enter your e-mail"
-              validations={[email, required]}
+              name="password"
+              placeholder="Enter new password"
+              validations={[required]}
+            />
+          </div>
+
+          <div className="mg-top-10">
+            <Input
+              autoComplete="off"
+              type="password"
+              className="form-input text-center"
+              value=""
+              name="confirm_password"
+              placeholder="Confirm new password"
+              validations={[password, required]}
             />
           </div>
 

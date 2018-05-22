@@ -6,12 +6,12 @@ import ResetPasswordForm from '../../components/reset_password/reset_password_fo
 class ResetPassword extends React.Component {
   render() {
     return (
-      <div id="forgot-password-page" className="main-content">
+      <div id="reset-password-page" className="main-content">
         <div className="row center-xs">
           <LogoHeader />
         </div>
         <div className="row center-xs">
-          <ResetPasswordForm />
+          <ResetPasswordForm token={this.props.match.params.token} />
         </div>
       </div>
     );
