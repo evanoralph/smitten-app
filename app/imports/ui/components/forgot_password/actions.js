@@ -8,6 +8,7 @@ export default {
         if (err.message === 'User not found [403]') {
           swal('Error', 'This email does not exist.', 'error');
         } else {
+          console.log(err)
           swal('Error', 'Something went wrong while requesting a forgot password email.', 'error');
         }
       } else {
