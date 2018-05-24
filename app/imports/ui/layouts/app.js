@@ -39,36 +39,33 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const self = this;
-
-    if (Meteor.isCordova) {
-      document.addEventListener(
-        "deviceready",
-        () => {
-          if (device.platform === "Android") {
-            document.addEventListener("resume", branchInit, false);
-          } else {
-            document.addEventListener("deviceready", branchInit, false);
-          }
-        },
-        false
-      );
-
-      function branchInit() {
-        Branch.initSession(data => {
-          // read deep link data on click
-          let code = "";
-          if (device.platform === "Android") {
-            code = data.code;
-          } else {
-            code =
-              getParameterByName("code", data["+non_branch_link"]) || data.code;
-          }
-          if (code) {
-            self.props.getToken(code, "isMobile");
+    const app = {
+      initialize: function() {
+        this.bindEvents();
+      },
+      bindEvents: function() {
+        document.addEventListener("deviceready", this.onDeviceReady, false);
+        document.addEventListener("resume", this.onDeviceResume, false);
+      },
+      onDeviceReady: function() {
+        app.handleBranch();
+      },
+      onDeviceResume: function() {
+        app.handleBranch();
+      },
+      handleBranch: function() {
+        Branch.initSession(function success(res) {
+          if (res["+clicked_branch_link"]) {
+            if (res.reset_token) {
+              document.location.pathname = `/reset-password/${res.reset_token}`;
+            }
           }
         });
       }
+    };
+
+    if (Meteor.isCordova) {
+      app.initialize();
     }
   }
 

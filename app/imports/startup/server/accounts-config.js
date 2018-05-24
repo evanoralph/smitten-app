@@ -2,7 +2,8 @@ import { Accounts } from 'meteor/accounts-base';
 
 export default () => {
   Accounts.urls.resetPassword = function(token) {
-    return Meteor.absoluteUrl(`reset-password/${token}`);
+    return `https://ztgq.app.link/gB3WS2ULaN?reset_token=${token}`;
+    // return Meteor.absoluteUrl(`reset-password/${token}`);
   };
   Accounts.onCreateUser(function(options, user) {
     const userHandler = user;

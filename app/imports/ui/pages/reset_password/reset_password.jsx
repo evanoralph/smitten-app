@@ -1,7 +1,7 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import LogoHeader from '../../components/login/logo_header/LogoHeader';
-import ResetPasswordForm from '../../components/reset_password/reset_password_form/ResetPasswordFormContainer';
+import React from "react";
+import { connect } from "react-redux";
+import LogoHeader from "../../components/login/logo_header/LogoHeader";
+import ResetPasswordForm from "../../components/reset_password/reset_password_form/ResetPasswordFormContainer";
 
 class ResetPassword extends React.Component {
   render() {
