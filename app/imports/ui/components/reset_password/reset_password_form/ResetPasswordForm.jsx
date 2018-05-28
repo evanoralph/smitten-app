@@ -17,6 +17,11 @@ class ResetPasswordForm extends React.Component {
     this.props.resetPassword(password, this.props.history);
   }
 
+  goToLogin(e) {
+    e.preventDefault();
+    this.props.history.push('/');
+  }
+
   render() {
     return (
       <div className="row center-xs">
@@ -47,6 +52,14 @@ class ResetPasswordForm extends React.Component {
 
           <Button className="btn-pink-rounded">RESET PASSWORD</Button>
         </Form>
+        <div className="col-xs-8 mg-top-10">
+          <button
+            onClick={this.goToLogin.bind(this)}
+            type="button"
+            className="btn-rounded bg-pink">
+            BACK TO LOGIN PAGE
+          </button>
+        </div>
       </div>
     );
   }
