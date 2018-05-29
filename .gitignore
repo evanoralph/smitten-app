@@ -7,3 +7,4 @@ start.sh
 android-start.sh
 android-build.sh
 deploy.sh
+.DS_Store
